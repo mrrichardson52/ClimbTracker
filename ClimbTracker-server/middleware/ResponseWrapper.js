@@ -10,6 +10,7 @@ module.exports.wrapResponse = function(req, res) {
 // information as it is obtained. The ResponseWrapper.wrapResponse function 
 // will format the response using these objects. 
 module.exports.initResponse = function(req, res, next) {
+    console.log('Init response'); 
     res.errors = [] // Error messages will be stored in this array
     res.model = {}; // model will contain the json of the model
     next(); 
