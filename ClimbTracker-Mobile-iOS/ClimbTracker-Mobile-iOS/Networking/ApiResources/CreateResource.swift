@@ -11,6 +11,6 @@ import UIKit
 struct CreateResource: ApiResource {
     
     var methodPath: String = "/create"
-    typealias Model = User
+    typealias Model = UserWrapper
     
 }

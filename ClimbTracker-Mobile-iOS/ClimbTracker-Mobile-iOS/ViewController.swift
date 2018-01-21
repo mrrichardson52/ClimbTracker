@@ -42,13 +42,21 @@ class ViewController: UIViewController {
         let bodyParams = [ "name" : name ];
         let apiRequest = ApiRequest(resource: createResource, httpMethod: "POST", bodyParams: bodyParams);
         self.request = apiRequest; // store the request so it doesn't get deallocated by ARC
-        apiRequest.load(withCompletion: { (response: User?) in
-            guard let response = response else {
-                return;
+        apiRequest.load(withCompletion: { (getModel: () throws -> UserWrapper) in
+            do {
+                let userWrapper = try getModel();
+                NSLog("DEBUG: User's name is " + userWrapper.model.name);
+            } catch DataLoadingErrors.DecodedModelEmpty {
+                NSLog("ERROR: decoded model is empty");
+            } catch DataLoadingErrors.NoDataReturned {
+                NSLog("ERROR: no data returned");
+            } catch DataLoadingErrors.Unauthorized {
+                NSLog("ERROR: unauthorized");
+            } catch {
+                NSLog("ERROR: " + error.localizedDescription);
             }
-            
-            NSLog("MRR: the returned name is %@", response.name);
         });
+        
     }
     
 }

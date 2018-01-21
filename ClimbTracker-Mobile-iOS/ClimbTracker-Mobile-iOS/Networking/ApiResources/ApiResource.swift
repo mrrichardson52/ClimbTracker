@@ -16,7 +16,7 @@ protocol ApiResource {
 extension ApiResource {
     
     var url: URL {
-        let baseUrl = "http://192.168.0.101:3000"
+        let baseUrl = "http://192.168.0.100:3000"
         let url = baseUrl + methodPath
         return URL(string: url)!
     }

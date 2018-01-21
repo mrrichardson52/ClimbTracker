@@ -1,8 +1,9 @@
 module.exports.wrapResponse = function(req, res) {
-    var wrappedJson = { model: res.model }
-    if (res.errors.length) {
-        wrappedJson.errors = res.errors; 
+    var wrappedJson = { 
+        model: res.model,
+        errors: res.errors
     }
+    console.log('Output: ' + wrappedJson); 
     res.send(wrappedJson); 
 }
 

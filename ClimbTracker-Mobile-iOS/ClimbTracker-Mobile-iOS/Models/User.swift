@@ -8,23 +8,20 @@
 
 import UIKit
 
-class User: ApiModel {
+struct UserWrapper: ApiModel {
+    
+    var errors: [String]
+    var model: User
+    
+    init(model: User) {
+        self.model = model;
+        self.errors = [];
+    }
+    
+}
+
+struct User: Codable {
     
     var name: String
-    
-    enum ModelKeys: String, CodingKey {
-        case name
-    }
-    
-    required init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        let modelValues = try values.nestedContainer(keyedBy: ModelKeys.self, forKey: .model)
-        name = try modelValues.contains(.name) ? modelValues.decode(String.self, forKey: .name) : ""
-        try super.init(from: decoder);
-    }
-    
-    override func encode(to encoder: Encoder) throws {
-        // Implement later
-    }
     
 }

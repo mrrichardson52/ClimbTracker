@@ -23,21 +23,25 @@ class ApiRequest<Resource: ApiResource> {
 }
 
 extension ApiRequest: NetworkRequest {
-        
-    func decode(_ data: Data) -> Resource.Model? {
+
+    func decode(_ data: Data) throws -> Resource.Model {
         
         var model: Resource.Model?
         do {
             model = try JSONDecoder().decode(Resource.Model.self, from: data)
         } catch {
-            NSLog("Error: %@", error.localizedDescription);
-            return nil;
+            throw error; 
         }
-        return model;
+        
+        guard let returnModel = model else {
+            throw DataLoadingErrors.DecodedModelEmpty
+        }
+        
+        return returnModel;
         
     }
 
-    func load(withCompletion completion: @escaping (Model?) -> Void) {
+    func load(withCompletion completion: @escaping (() throws -> Model) -> Void) {
         load(resource.url, httpMethod: httpMethod, bodyParams: bodyParams!, withCompletion: completion);
     }
 }

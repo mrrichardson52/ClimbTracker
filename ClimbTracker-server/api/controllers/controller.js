@@ -20,12 +20,12 @@ module.exports.createUser = function(req, res, next) {
                 return ;
             }
             console.log('1'); 
-            // save the new user
+            // save the new user 
             var newUser = new User(req.body);
             newUser.save()
                 .then(() => {
                     res.model = {
-                        name: newUser
+                        name: newUser.name
                     }
                     next(); 
                     return; 

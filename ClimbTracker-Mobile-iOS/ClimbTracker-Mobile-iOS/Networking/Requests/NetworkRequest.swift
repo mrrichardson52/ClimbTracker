@@ -8,16 +8,22 @@
 
 import UIKit
 
+enum DataLoadingErrors: Error {
+    case Unauthorized
+    case NoDataReturned
+    case DecodedModelEmpty
+}
+
 protocol NetworkRequest: class {
     
     associatedtype Model: Codable
-    func load(withCompletion completion: @escaping (Model?) -> Void)
-    func decode(_ data: Data) -> Model?
+    func load(withCompletion completion: @escaping (() throws -> Model) -> Void)
+    func decode(_ data: Data) throws -> Model
 }
 
 extension NetworkRequest {
     
-    func load(_ url: URL, httpMethod: String, bodyParams: [String : String], withCompletion completion: @escaping (Model?) -> Void) {
+    func load(_ url: URL, httpMethod: String, bodyParams: [String : String], withCompletion completion: @escaping (() throws -> Model) -> Void) {
         
         let configuration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
@@ -32,11 +38,46 @@ extension NetworkRequest {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
         let task = session.dataTask(with: request, completionHandler: { [weak self] (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            // check for errors
+            if (error != nil) {
+                completion({
+                    throw error!;
+                });
+                return;
+            }
+            
+            // check the status code
+            if let httpResponse = response as? HTTPURLResponse {
+                switch httpResponse.statusCode {
+                case 401:
+                    completion({
+                        throw DataLoadingErrors.Unauthorized
+                    })
+                    break;
+                default:
+                    break;
+                }
+            }
+            
+            // prase the data into the model type
             guard let data = data else {
-                completion(nil)
+                completion({
+                    throw DataLoadingErrors.NoDataReturned;
+                });
                 return
             }
-            completion(self?.decode(data))
+            
+            completion({
+                do {
+                    guard let model = try self?.decode(data) else {
+                        throw DataLoadingErrors.DecodedModelEmpty
+                    }
+                    return model
+                } catch {
+                    throw error;
+                }
+            });
+
         })
         task.resume()
         
