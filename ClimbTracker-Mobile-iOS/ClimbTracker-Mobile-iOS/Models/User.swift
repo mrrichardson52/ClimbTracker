@@ -8,20 +8,16 @@
 
 import UIKit
 
-struct UserWrapper: ApiModel {
+struct UserResponse: ApiResponseModel {
     
-    var errors: [String]
-    var model: User
-    
-    init(model: User) {
-        self.model = model;
-        self.errors = [];
-    }
+    var errors: [String]?
+    var model: User?
     
 }
 
-struct User: Codable {
-    
-    var name: String
-    
+struct User: Decodable, ApiRequestModel {
+    var username: String
+    var nickname: String?
+    var password: String?
 }
+

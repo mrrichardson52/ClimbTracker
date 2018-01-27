@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34342B6A201A45D200130CBF /* QuestionAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34342B69201A45D200130CBF /* QuestionAnswerCell.swift */; };
+		34342B6C201A45DC00130CBF /* QuestionAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34342B6B201A45DC00130CBF /* QuestionAnswerCell.xib */; };
+		34342B6E201A49D200130CBF /* QuestionAnswerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34342B6D201A49D200130CBF /* QuestionAnswerCollectionView.swift */; };
+		34342B70201A4A9F00130CBF /* QuestionStackViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34342B6F201A4A9F00130CBF /* QuestionStackViewCell.swift */; };
+		34342B72201A4AA800130CBF /* QuestionStackViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34342B71201A4AA800130CBF /* QuestionStackViewCell.xib */; };
+		34342B7A201BADB500130CBF /* ClimbConfirmationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34342B79201BADB500130CBF /* ClimbConfirmationCell.swift */; };
+		34342B7C201BADBE00130CBF /* ClimbConfirmationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34342B7B201BADBE00130CBF /* ClimbConfirmationCell.xib */; };
+		34342B7E201BBFEB00130CBF /* ClimbSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34342B7D201BBFEB00130CBF /* ClimbSessionViewController.swift */; };
+		34342B82201BC02F00130CBF /* ClimbTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34342B81201BC02F00130CBF /* ClimbTableViewCell.xib */; };
+		34342B84201BC03E00130CBF /* ClimbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34342B83201BC03E00130CBF /* ClimbTableViewCell.swift */; };
+		343857AE20184CAA00EF27DB /* RegisterResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343857AD20184CAA00EF27DB /* RegisterResource.swift */; };
+		343857B2201A2C8900EF27DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343857B1201A2C8900EF27DB /* HomeViewController.swift */; };
+		343857B9201A374C00EF27DB /* CreateClimbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343857B8201A374C00EF27DB /* CreateClimbViewController.swift */; };
 		347F6AA2200C472F0086F5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F6AA1200C472F0086F5A5 /* AppDelegate.swift */; };
 		347F6AA4200C472F0086F5A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F6AA3200C472F0086F5A5 /* ViewController.swift */; };
 		347F6AA7200C472F0086F5A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347F6AA5200C472F0086F5A5 /* Main.storyboard */; };
@@ -14,13 +27,32 @@
 		347F6AAC200C472F0086F5A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347F6AAA200C472F0086F5A5 /* LaunchScreen.storyboard */; };
 		347F6AB5200C4BFA0086F5A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F6AB4200C4BFA0086F5A5 /* User.swift */; };
 		347F6AB8200C52A00086F5A5 /* ApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F6AB7200C52A00086F5A5 /* ApiResource.swift */; };
-		347F6ABC200C60AF0086F5A5 /* CreateResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F6ABB200C60AF0086F5A5 /* CreateResource.swift */; };
 		347F6ABF200C61870086F5A5 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F6ABE200C61870086F5A5 /* NetworkRequest.swift */; };
 		347F6AC1200C64030086F5A5 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F6AC0200C64030086F5A5 /* ApiRequest.swift */; };
-		347F6AC3200D7B6F0086F5A5 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F6AC2200D7B6F0086F5A5 /* ApiModel.swift */; };
+		349D88D92015418400CFAFDE /* ClimbingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D88D82015418400CFAFDE /* ClimbingSession.swift */; };
+		349D88DB2015419800CFAFDE /* SessionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D88DA2015419800CFAFDE /* SessionInfo.swift */; };
+		349D88DD201541A800CFAFDE /* Climb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D88DC201541A800CFAFDE /* Climb.swift */; };
+		349D88DF2015457F00CFAFDE /* StoreSessionResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D88DE2015457F00CFAFDE /* StoreSessionResource.swift */; };
+		349D88E120154AA100CFAFDE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D88E020154AA100CFAFDE /* Result.swift */; };
+		349D88E52015502300CFAFDE /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D88E42015502300CFAFDE /* LoginResource.swift */; };
+		349D88E72015505E00CFAFDE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D88E62015505E00CFAFDE /* LoginResponse.swift */; };
+		349D88ED201589B000CFAFDE /* ApiModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D88EC201589B000CFAFDE /* ApiModelProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34342B69201A45D200130CBF /* QuestionAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerCell.swift; sourceTree = "<group>"; };
+		34342B6B201A45DC00130CBF /* QuestionAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionAnswerCell.xib; sourceTree = "<group>"; };
+		34342B6D201A49D200130CBF /* QuestionAnswerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerCollectionView.swift; sourceTree = "<group>"; };
+		34342B6F201A4A9F00130CBF /* QuestionStackViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStackViewCell.swift; sourceTree = "<group>"; };
+		34342B71201A4AA800130CBF /* QuestionStackViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionStackViewCell.xib; sourceTree = "<group>"; };
+		34342B79201BADB500130CBF /* ClimbConfirmationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbConfirmationCell.swift; sourceTree = "<group>"; };
+		34342B7B201BADBE00130CBF /* ClimbConfirmationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClimbConfirmationCell.xib; sourceTree = "<group>"; };
+		34342B7D201BBFEB00130CBF /* ClimbSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbSessionViewController.swift; sourceTree = "<group>"; };
+		34342B81201BC02F00130CBF /* ClimbTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClimbTableViewCell.xib; sourceTree = "<group>"; };
+		34342B83201BC03E00130CBF /* ClimbTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbTableViewCell.swift; sourceTree = "<group>"; };
+		343857AD20184CAA00EF27DB /* RegisterResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResource.swift; sourceTree = "<group>"; };
+		343857B1201A2C8900EF27DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		343857B8201A374C00EF27DB /* CreateClimbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClimbViewController.swift; sourceTree = "<group>"; };
 		347F6A9E200C472F0086F5A5 /* ClimbTracker-Mobile-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClimbTracker-Mobile-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		347F6AA1200C472F0086F5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		347F6AA3200C472F0086F5A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,10 +62,16 @@
 		347F6AAD200C472F0086F5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347F6AB4200C4BFA0086F5A5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		347F6AB7200C52A00086F5A5 /* ApiResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResource.swift; sourceTree = "<group>"; };
-		347F6ABB200C60AF0086F5A5 /* CreateResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateResource.swift; sourceTree = "<group>"; };
 		347F6ABE200C61870086F5A5 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		347F6AC0200C64030086F5A5 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
-		347F6AC2200D7B6F0086F5A5 /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
+		349D88D82015418400CFAFDE /* ClimbingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbingSession.swift; sourceTree = "<group>"; };
+		349D88DA2015419800CFAFDE /* SessionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionInfo.swift; sourceTree = "<group>"; };
+		349D88DC201541A800CFAFDE /* Climb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Climb.swift; sourceTree = "<group>"; };
+		349D88DE2015457F00CFAFDE /* StoreSessionResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSessionResource.swift; sourceTree = "<group>"; };
+		349D88E020154AA100CFAFDE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		349D88E42015502300CFAFDE /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
+		349D88E62015505E00CFAFDE /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		349D88EC201589B000CFAFDE /* ApiModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModelProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +85,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		343857B3201A2FDA00EF27DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34342B6B201A45DC00130CBF /* QuestionAnswerCell.xib */,
+				34342B69201A45D200130CBF /* QuestionAnswerCell.swift */,
+				34342B6D201A49D200130CBF /* QuestionAnswerCollectionView.swift */,
+				34342B6F201A4A9F00130CBF /* QuestionStackViewCell.swift */,
+				34342B71201A4AA800130CBF /* QuestionStackViewCell.xib */,
+				34342B79201BADB500130CBF /* ClimbConfirmationCell.swift */,
+				34342B7B201BADBE00130CBF /* ClimbConfirmationCell.xib */,
+				34342B81201BC02F00130CBF /* ClimbTableViewCell.xib */,
+				34342B83201BC03E00130CBF /* ClimbTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		344635B7201593050007FB2E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				347F6AA3200C472F0086F5A5 /* ViewController.swift */,
+				343857B1201A2C8900EF27DB /* HomeViewController.swift */,
+				343857B8201A374C00EF27DB /* CreateClimbViewController.swift */,
+				34342B7D201BBFEB00130CBF /* ClimbSessionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		347F6A95200C472F0086F5A5 = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +131,11 @@
 		347F6AA0200C472F0086F5A5 /* ClimbTracker-Mobile-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				343857B3201A2FDA00EF27DB /* Views */,
+				344635B7201593050007FB2E /* ViewControllers */,
 				347F6AB6200C52910086F5A5 /* Networking */,
 				347F6AB3200C4BE60086F5A5 /* Models */,
 				347F6AA1200C472F0086F5A5 /* AppDelegate.swift */,
-				347F6AA3200C472F0086F5A5 /* ViewController.swift */,
 				347F6AA5200C472F0086F5A5 /* Main.storyboard */,
 				347F6AA8200C472F0086F5A5 /* Assets.xcassets */,
 				347F6AAA200C472F0086F5A5 /* LaunchScreen.storyboard */,
@@ -82,7 +148,12 @@
 			isa = PBXGroup;
 			children = (
 				347F6AB4200C4BFA0086F5A5 /* User.swift */,
-				347F6AC2200D7B6F0086F5A5 /* ApiModel.swift */,
+				349D88D82015418400CFAFDE /* ClimbingSession.swift */,
+				349D88DA2015419800CFAFDE /* SessionInfo.swift */,
+				349D88DC201541A800CFAFDE /* Climb.swift */,
+				349D88E020154AA100CFAFDE /* Result.swift */,
+				349D88E62015505E00CFAFDE /* LoginResponse.swift */,
+				349D88EC201589B000CFAFDE /* ApiModelProtocols.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,7 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				347F6AB7200C52A00086F5A5 /* ApiResource.swift */,
-				347F6ABB200C60AF0086F5A5 /* CreateResource.swift */,
+				349D88DE2015457F00CFAFDE /* StoreSessionResource.swift */,
+				349D88E42015502300CFAFDE /* LoginResource.swift */,
+				343857AD20184CAA00EF27DB /* RegisterResource.swift */,
 			);
 			path = ApiResources;
 			sourceTree = "<group>";
@@ -173,8 +246,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34342B72201A4AA800130CBF /* QuestionStackViewCell.xib in Resources */,
 				347F6AAC200C472F0086F5A5 /* LaunchScreen.storyboard in Resources */,
+				34342B6C201A45DC00130CBF /* QuestionAnswerCell.xib in Resources */,
+				34342B82201BC02F00130CBF /* ClimbTableViewCell.xib in Resources */,
 				347F6AA9200C472F0086F5A5 /* Assets.xcassets in Resources */,
+				34342B7C201BADBE00130CBF /* ClimbConfirmationCell.xib in Resources */,
 				347F6AA7200C472F0086F5A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,12 +264,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				347F6AA4200C472F0086F5A5 /* ViewController.swift in Sources */,
+				349D88E52015502300CFAFDE /* LoginResource.swift in Sources */,
+				349D88E120154AA100CFAFDE /* Result.swift in Sources */,
+				34342B70201A4A9F00130CBF /* QuestionStackViewCell.swift in Sources */,
+				349D88D92015418400CFAFDE /* ClimbingSession.swift in Sources */,
+				34342B6E201A49D200130CBF /* QuestionAnswerCollectionView.swift in Sources */,
 				347F6AA2200C472F0086F5A5 /* AppDelegate.swift in Sources */,
 				347F6AB8200C52A00086F5A5 /* ApiResource.swift in Sources */,
-				347F6ABC200C60AF0086F5A5 /* CreateResource.swift in Sources */,
+				34342B6A201A45D200130CBF /* QuestionAnswerCell.swift in Sources */,
+				343857AE20184CAA00EF27DB /* RegisterResource.swift in Sources */,
+				349D88E72015505E00CFAFDE /* LoginResponse.swift in Sources */,
+				343857B9201A374C00EF27DB /* CreateClimbViewController.swift in Sources */,
+				349D88DF2015457F00CFAFDE /* StoreSessionResource.swift in Sources */,
+				349D88ED201589B000CFAFDE /* ApiModelProtocols.swift in Sources */,
 				347F6ABF200C61870086F5A5 /* NetworkRequest.swift in Sources */,
-				347F6AC3200D7B6F0086F5A5 /* ApiModel.swift in Sources */,
+				343857B2201A2C8900EF27DB /* HomeViewController.swift in Sources */,
+				349D88DD201541A800CFAFDE /* Climb.swift in Sources */,
 				347F6AC1200C64030086F5A5 /* ApiRequest.swift in Sources */,
+				34342B7A201BADB500130CBF /* ClimbConfirmationCell.swift in Sources */,
+				349D88DB2015419800CFAFDE /* SessionInfo.swift in Sources */,
+				34342B7E201BBFEB00130CBF /* ClimbSessionViewController.swift in Sources */,
+				34342B84201BC03E00130CBF /* ClimbTableViewCell.swift in Sources */,
 				347F6AB5200C4BFA0086F5A5 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

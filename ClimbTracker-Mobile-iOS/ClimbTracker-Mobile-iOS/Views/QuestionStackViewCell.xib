@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QuestionStackViewCell" customModule="ClimbTracker_Mobile_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="431"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="lNR-oW-b3b">
+                    <rect key="frame" x="10" y="10" width="355" height="411"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKz-Ap-vUq">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="97"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owt-cL-kFC">
+                                    <rect key="frame" x="93.5" y="38" width="48" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntR-Wu-3we">
+                                    <rect key="frame" x="0.0" y="38" width="83.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Owt-cL-kFC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IKz-Ap-vUq" secondAttribute="top" constant="6" id="2dv-1l-jBS"/>
+                                <constraint firstItem="ntR-Wu-3we" firstAttribute="leading" secondItem="IKz-Ap-vUq" secondAttribute="leading" id="JS2-JL-Rvd"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ntR-Wu-3we" secondAttribute="bottom" constant="6" id="USD-6j-a14"/>
+                                <constraint firstItem="ntR-Wu-3we" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IKz-Ap-vUq" secondAttribute="top" constant="6" id="Xwk-ag-KQz"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Owt-cL-kFC" secondAttribute="bottom" constant="6" id="fJB-G0-chL"/>
+                                <constraint firstItem="Owt-cL-kFC" firstAttribute="leading" secondItem="ntR-Wu-3we" secondAttribute="trailing" constant="10" id="r53-rx-Mat"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Owt-cL-kFC" secondAttribute="trailing" id="xig-pH-97z"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CNw-lZ-UPr" customClass="QuestionAnswerCollectionView" customModule="ClimbTracker_Mobile_iOS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="111" width="355" height="300"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="Slo-9E-xgh"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p1h-nG-l6m">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="lNR-oW-b3b" secondAttribute="bottom" constant="10" id="1eZ-oc-Yxv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lNR-oW-b3b" secondAttribute="trailing" constant="10" id="94L-dI-MVz"/>
+                <constraint firstItem="lNR-oW-b3b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Cv7-Ir-RLk"/>
+                <constraint firstItem="lNR-oW-b3b" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="nZN-cX-idN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="answerLabel" destination="Owt-cL-kFC" id="DTG-3m-5EM"/>
+                <outlet property="collectionViewHeightConstraint" destination="Slo-9E-xgh" id="0nU-Aq-w8b"/>
+                <outlet property="flowLayout" destination="p1h-nG-l6m" id="8DY-Dq-Y9E"/>
+                <outlet property="labelContainer" destination="IKz-Ap-vUq" id="KSo-15-DhR"/>
+                <outlet property="questionAnswerCollectionView" destination="CNw-lZ-UPr" id="1pr-rm-axz"/>
+                <outlet property="questionLabel" destination="ntR-Wu-3we" id="5vc-Sz-d9I"/>
+                <outlet property="stackView" destination="lNR-oW-b3b" id="qHU-DH-lJh"/>
+            </connections>
+            <point key="canvasLocation" x="27.5" y="177.5"/>
+        </view>
+    </objects>
+</document>

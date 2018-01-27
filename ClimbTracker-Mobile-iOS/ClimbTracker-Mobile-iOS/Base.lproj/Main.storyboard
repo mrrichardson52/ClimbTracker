@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cxt-Ab-CRA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-ZR-t53">
-                                <rect key="frame" x="154" y="307" width="67" height="30"/>
+                                <rect key="frame" x="161" y="307" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Make Call"/>
+                                <state key="normal" title="register"/>
                                 <connections>
-                                    <action selector="makeApiCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKR-Qc-VQX"/>
+                                    <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S5m-UR-bws"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7I-u1-1Z9">
@@ -32,18 +32,201 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKR-L2-hzW">
+                                <rect key="frame" x="167" y="396" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="login"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="08D-T4-NFm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-DF-q7O">
+                                <rect key="frame" x="139" y="456" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="store session"/>
+                                <connections>
+                                    <action selector="storeSession:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zyt-If-mc8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7r-n3-q2l">
+                                <rect key="frame" x="165" y="533" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLN-ys-1nP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="button" destination="a6b-ZR-t53" id="033-ZU-je3"/>
+                        <outlet property="loginButton" destination="SKR-L2-hzW" id="6ww-nx-TRu"/>
+                        <outlet property="logoutButton" destination="j7r-n3-q2l" id="A86-O0-nRa"/>
+                        <outlet property="registerButton" destination="a6b-ZR-t53" id="Ysu-Gh-ThC"/>
+                        <outlet property="storeSessionButton" destination="vtt-DF-q7O" id="dHl-AE-0kr"/>
                         <outlet property="textField" destination="k7I-u1-1Z9" id="qcb-M4-qa1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="29.23538230884558"/>
+            <point key="canvasLocation" x="-961" y="-761"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EhZ-34-w5I">
+            <objects>
+                <navigationController id="Cxt-Ab-CRA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rEW-Lu-z3J">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="P89-lO-EXC" kind="relationship" relationship="rootViewController" id="P3J-zo-Ldi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szD-Qk-b46" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962" y="-66"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="VyF-kU-p6g">
+            <objects>
+                <viewController id="gIj-o4-spQ" customClass="HomeViewController" customModule="ClimbTracker_Mobile_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gxb-j2-aeg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJB-aR-sAG">
+                                <rect key="frame" x="98.5" y="328" width="178" height="31"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="fdm-Ri-iRW"/>
+                                    <constraint firstAttribute="width" constant="178" id="fp8-AU-fl6"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                <inset key="titleEdgeInsets" minX="3" minY="3" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="New Climbing Session">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="newClimbingSessionButtonPressed:" destination="gIj-o4-spQ" eventType="touchUpInside" id="yoq-8V-lzO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aJB-aR-sAG" firstAttribute="centerY" secondItem="HSp-xr-fSJ" secondAttribute="centerY" id="ew1-Uf-MFq"/>
+                            <constraint firstItem="aJB-aR-sAG" firstAttribute="centerX" secondItem="HSp-xr-fSJ" secondAttribute="centerX" id="sgv-6y-CjR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HSp-xr-fSJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MZd-5H-NdE"/>
+                    <connections>
+                        <outlet property="newClimbingSessionButton" destination="aJB-aR-sAG" id="3Ni-Jd-JD1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRL-Rq-VGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-121" y="-636"/>
+        </scene>
+        <!--Climb Session View Controller-->
+        <scene sceneID="C4R-ZU-stP">
+            <objects>
+                <viewController id="P89-lO-EXC" customClass="ClimbSessionViewController" customModule="ClimbTracker_Mobile_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i2d-Lt-Shc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hzN-Wf-x7F">
+                                <rect key="frame" x="0.0" y="64" width="375" height="557"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9K-Tv-yRf">
+                                <rect key="frame" x="5" y="626" width="365" height="36"/>
+                                <color key="backgroundColor" red="0.44973094980156492" green="0.62677071010221175" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
+                                <state key="normal" title="Add Climb">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addClimbButtonPressed:" destination="P89-lO-EXC" eventType="touchUpInside" id="6Oz-Ek-AFv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b9K-Tv-yRf" firstAttribute="leading" secondItem="caP-3P-VYJ" secondAttribute="leading" constant="5" id="7MM-Hb-rLT"/>
+                            <constraint firstItem="hzN-Wf-x7F" firstAttribute="top" secondItem="caP-3P-VYJ" secondAttribute="top" id="Bdw-nA-mdA"/>
+                            <constraint firstItem="caP-3P-VYJ" firstAttribute="trailing" secondItem="b9K-Tv-yRf" secondAttribute="trailing" constant="5" id="Nqo-z9-No1"/>
+                            <constraint firstItem="caP-3P-VYJ" firstAttribute="bottom" secondItem="b9K-Tv-yRf" secondAttribute="bottom" constant="5" id="OtH-DG-EpV"/>
+                            <constraint firstItem="b9K-Tv-yRf" firstAttribute="top" secondItem="hzN-Wf-x7F" secondAttribute="bottom" constant="5" id="SCg-17-Ah5"/>
+                            <constraint firstItem="hzN-Wf-x7F" firstAttribute="leading" secondItem="caP-3P-VYJ" secondAttribute="leading" id="abZ-pH-NFb"/>
+                            <constraint firstItem="caP-3P-VYJ" firstAttribute="trailing" secondItem="hzN-Wf-x7F" secondAttribute="trailing" id="cZ2-pX-WSj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="caP-3P-VYJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dPu-XM-k7p"/>
+                    <connections>
+                        <outlet property="addClimbButton" destination="b9K-Tv-yRf" id="83D-3D-XwV"/>
+                        <outlet property="tableView" destination="hzN-Wf-x7F" id="DQ9-7V-Qch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n69-OZ-ldu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="-66.11694152923539"/>
+        </scene>
+        <!--Create Climb View Controller-->
+        <scene sceneID="XAf-gW-D00">
+            <objects>
+                <viewController storyboardIdentifier="CreateClimbViewController" id="v1b-PX-aLt" customClass="CreateClimbViewController" customModule="ClimbTracker_Mobile_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5xR-HD-od9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9O-Dr-cHJ">
+                                <rect key="frame" x="0.0" y="459" width="375" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fX5-N3-dnS" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="128"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="INT-2L-kFF">
+                                                <rect key="frame" x="10" y="0.0" width="355" height="128"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="INT-2L-kFF" firstAttribute="leading" secondItem="fX5-N3-dnS" secondAttribute="leading" constant="10" id="Dir-yl-WHD"/>
+                                            <constraint firstAttribute="bottom" secondItem="INT-2L-kFF" secondAttribute="bottom" constant="10" id="E9P-JR-69H"/>
+                                            <constraint firstAttribute="trailing" secondItem="INT-2L-kFF" secondAttribute="trailing" constant="10" id="QBw-RZ-KN8"/>
+                                            <constraint firstItem="INT-2L-kFF" firstAttribute="top" secondItem="fX5-N3-dnS" secondAttribute="top" id="SCb-3u-TY1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fX5-N3-dnS" secondAttribute="trailing" id="4FK-ia-z00"/>
+                                    <constraint firstItem="fX5-N3-dnS" firstAttribute="top" secondItem="B9O-Dr-cHJ" secondAttribute="top" id="Kh2-fa-1wZ"/>
+                                    <constraint firstItem="fX5-N3-dnS" firstAttribute="width" secondItem="B9O-Dr-cHJ" secondAttribute="width" id="gfT-F0-9FK"/>
+                                    <constraint firstAttribute="bottom" secondItem="fX5-N3-dnS" secondAttribute="bottom" id="p3m-vc-InG"/>
+                                    <constraint firstItem="fX5-N3-dnS" firstAttribute="leading" secondItem="B9O-Dr-cHJ" secondAttribute="leading" id="xpN-4A-dEL"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91236108273469241" green="0.94573644328167472" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KlR-a7-HpH" firstAttribute="trailing" secondItem="B9O-Dr-cHJ" secondAttribute="trailing" id="3Vt-h2-nwW"/>
+                            <constraint firstItem="B9O-Dr-cHJ" firstAttribute="leading" secondItem="KlR-a7-HpH" secondAttribute="leading" id="ZSB-gV-2kx"/>
+                            <constraint firstItem="B9O-Dr-cHJ" firstAttribute="top" secondItem="KlR-a7-HpH" secondAttribute="top" constant="10" id="lY5-fx-G72"/>
+                            <constraint firstItem="KlR-a7-HpH" firstAttribute="bottom" secondItem="B9O-Dr-cHJ" secondAttribute="bottom" id="wdF-7K-X5F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KlR-a7-HpH"/>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="INT-2L-kFF" id="7uR-ok-9Pd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oek-Pl-117" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="-66"/>
         </scene>
     </scenes>
 </document>

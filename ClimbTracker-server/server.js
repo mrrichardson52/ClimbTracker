@@ -10,26 +10,28 @@ var responseWrapper = require('./middleware/ResponseWrapper');
 var morgan = require('morgan'); // logs request type (GET, POST, etc), path, and response time to console
 var passport = require('passport'); 
 var config = require('./config/main'); 
-var authUser = require('./api/models/AuthUser'); 
 var passportHelper = require('./config/passportHelper'); 
+var formatRequestBody = require('./middleware/RequestBodyFormatter'); 
 
 // first, connect to the database
 db.connect(config.database); 
 
 // initialize the values that will be wrapped in the response
-// this needs to go first since it inits the errors array
+// this needs to go before anything that uses the values
 app.use(responseWrapper.initResponse); 
 
 // use the body-parser middleware to parse body of request
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// format the req.body
+// app.use(formatRequestBody); 
+
 // log requests to console
 app.use(morgan('dev')); 
 
-// use passport for authentication
-app.use(passport.initialize()); 
-passportHelper(passport); 
+// authenticate user with passport
+app.use(passportHelper.getAuthUser)
 
 // use the routes
 routes(app);  
