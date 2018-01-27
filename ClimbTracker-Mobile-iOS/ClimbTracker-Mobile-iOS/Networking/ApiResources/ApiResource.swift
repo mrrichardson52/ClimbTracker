@@ -9,14 +9,15 @@
 import UIKit
 
 protocol ApiResource {
-    associatedtype Model: Codable
+    associatedtype ResponseModel: Decodable
+    associatedtype RequestModel: Encodable
     var methodPath: String { get }
 }
 
 extension ApiResource {
     
     var url: URL {
-        let baseUrl = "http://192.168.0.100:3000"
+        let baseUrl = "http://192.168.0.104:3000"
         let url = baseUrl + methodPath
         return URL(string: url)!
     }

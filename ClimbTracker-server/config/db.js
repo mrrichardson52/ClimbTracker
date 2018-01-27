@@ -13,8 +13,9 @@ var connect = function(dbURI) {
 }
 
 // require all of the models to make sure they are registered
-require('../api/models/BoulderProblem');
+require('../api/models/Climb');
 require('../api/models/ClimbingSession');
+require('../api/models/SessionInfo');
 require('../api/models/User'); 
 
 module.exports.connect = connect; 

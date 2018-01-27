@@ -16,28 +16,38 @@ enum DataLoadingErrors: Error {
 
 protocol NetworkRequest: class {
     
-    associatedtype Model: Codable
-    func load(withCompletion completion: @escaping (() throws -> Model) -> Void)
-    func decode(_ data: Data) throws -> Model
+    associatedtype ResponseModel: Decodable
+    associatedtype RequestModel: Encodable
+    func load(withCompletion completion: @escaping (() throws -> ResponseModel) -> Void)
+    func decode(_ data: Data) throws -> ResponseModel
 }
 
 extension NetworkRequest {
     
-    func load(_ url: URL, httpMethod: String, bodyParams: [String : String], withCompletion completion: @escaping (() throws -> Model) -> Void) {
+    func load(_ url: URL, httpMethod: String, requestModel: RequestModel?, withCompletion completion: @escaping (() throws -> ResponseModel) -> Void) {
         
         let configuration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0);
         request.httpMethod = httpMethod;
         do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: bodyParams, options: .sortedKeys);
+            if let model = requestModel {
+                request.httpBody = try JSONEncoder().encode(model);
+            }
         } catch {
             // do nothing for now
         }
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
+        // add token to authorization header if it exists
+        let defaults = UserDefaults();
+        if let token = defaults.value(forKey: ViewController.TOKEN_KEY) as? String {
+            request.addValue(token, forHTTPHeaderField: "Authorization")
+        }
+        
         let task = session.dataTask(with: request, completionHandler: { [weak self] (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            
             // check for errors
             if (error != nil) {
                 completion({
